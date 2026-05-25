@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11819.183
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E47E2B17-2E50-4672-A7C3-9AF38C0117C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0864DB1C-0D8E-40A1-B715-04608CFFF24A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{40F937BB-78E0-447D-ADA2-917D8D589B01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicLocalization.Demo", "samples\DynamicLocalization.Demo\DynamicLocalization.Demo.csproj", "{B66DA715-E137-61D7-2C02-26A673E57B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleA", "samples\Modules\ModuleA\ModuleA.csproj", "{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleB", "samples\Modules\ModuleB\ModuleB.csproj", "{3C9840C8-3D05-4728-3AB8-2AEC559F69EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleC", "samples\Modules\ModuleC\ModuleC.csproj", "{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicLocalizationUI.Avalonia", "src\DynamicLocalization.Avalonia\DynamicLocalizationUI.Avalonia.csproj", "{5F21001B-E2B3-D51E-12BE-AE86C148C44A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{44DCA125-AD5D-4500-A42F-AF794AAC3DDF}"
+	ProjectSection(SolutionItems) = preProject
+		build\Avalonia.Desktop.props = build\Avalonia.Desktop.props
+		build\Avalonia.Diagnostics.props = build\Avalonia.Diagnostics.props
+		build\Avalonia.props = build\Avalonia.props
+		build\Base.props = build\Base.props
+		build\dynamicLocalization.Avalonia.public.snk = build\dynamicLocalization.Avalonia.public.snk
+		build\Prism.Avalonia.props = build\Prism.Avalonia.props
+		build\ReferenceAssemblies.props = build\ReferenceAssemblies.props
+		build\SignAssembly.props = build\SignAssembly.props
+		build\SourceLink.props = build\SourceLink.props
+		build\XUnit.props = build\XUnit.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B66DA715-E137-61D7-2C02-26A673E57B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66DA715-E137-61D7-2C02-26A673E57B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66DA715-E137-61D7-2C02-26A673E57B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66DA715-E137-61D7-2C02-26A673E57B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9840C8-3D05-4728-3AB8-2AEC559F69EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9840C8-3D05-4728-3AB8-2AEC559F69EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9840C8-3D05-4728-3AB8-2AEC559F69EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9840C8-3D05-4728-3AB8-2AEC559F69EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E47E2B17-2E50-4672-A7C3-9AF38C0117C7} = {40F937BB-78E0-447D-ADA2-917D8D589B01}
+		{B66DA715-E137-61D7-2C02-26A673E57B81} = {40F937BB-78E0-447D-ADA2-917D8D589B01}
+		{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD} = {E47E2B17-2E50-4672-A7C3-9AF38C0117C7}
+		{3C9840C8-3D05-4728-3AB8-2AEC559F69EF} = {E47E2B17-2E50-4672-A7C3-9AF38C0117C7}
+		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA} = {E47E2B17-2E50-4672-A7C3-9AF38C0117C7}
+		{5F21001B-E2B3-D51E-12BE-AE86C148C44A} = {0864DB1C-0D8E-40A1-B715-04608CFFF24A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56BCD824-ECAE-4CAC-813F-2377F339741F}
+	EndGlobalSection
+EndGlobal

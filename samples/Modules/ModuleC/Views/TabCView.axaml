@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="ModuleC.Views.TabCView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:extensions="clr-namespace:DynamicLocalizationUI.Avalonia.Extensions;assembly=DynamicLocalizationUI.Avalonia"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="300">
+
+    <Grid RowDefinitions="Auto,*"
+          Background="#B5D8B5">
+        <TabControl Grid.Row="0">
+            <TabItem Header="Tab C">
+                <StackPanel>
+                    <TextBlock Text="{Binding Message}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+
+                    <StackPanel Orientation="Horizontal" Margin="3" Spacing="5"
+                                HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Value, StringFormat={}Value: {0}}"
+                                   VerticalAlignment="Center"
+                                   Margin="3,0" />
+                        <Button Content="+1" Command="{Binding IncrementCommand}" />
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Spacing="5"
+                    Margin="0, 10"
+                    Grid.Row="1">
+            <Border Background="Gainsboro"
+                    CornerRadius="6" Padding="0" HorizontalAlignment="Center">
+                <StackPanel>
+                    <MenuItem Header="{extensions:Localize CutC}" />
+                    <MenuItem Header="{extensions:Localize CopyC}" />
+                    <MenuItem Header="{extensions:Localize PasteC}" />
+                    <Separator />
+                    <MenuItem Header="{extensions:Localize DuplicateC}" />
+                    <MenuItem Header="{extensions:Localize Select_AllC}" />
+                    <Separator />
+                    <MenuItem Header="{extensions:Localize DeleteC}" Foreground="Red" />
+                </StackPanel>
+            </Border>
+
+            <Button Content="{extensions:Localize DeleteC}"
+                    Margin="0,10" Padding="3"
+                    ToolTip.Tip="{extensions:Localize DeleteC}"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
