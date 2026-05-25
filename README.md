@@ -1,4 +1,8 @@
 # DynamicLocalization.Avalonia
+
+[![NuGet](https://img.shields.io/nuget/v/DynamicLocalizationUI.Avalonia.svg)](https://www.nuget.org/packages/DynamicLocalizationUI.Avalonia)
+[![NuGet](https://img.shields.io/nuget/dt/DynamicLocalizationUI.Avalonia.svg)](https://www.nuget.org/packages/DynamicLocalizationUI.Avalonia)
+
 Dynamic runtime localization in a [Avalonia](https://github.com/AvaloniaUI/Avalonia) application. This app helps get start using [AvaloniaUI](https://github.com/AvaloniaUI/Avalonia) with [Prism.Avalonia](https://github.com/AvaloniaCommunity/Prism.Avalonia).
 
 ![Анимация](https://github.com/user-attachments/assets/432af2c1-5b88-4883-8e0a-1c5cdd466d9d)
