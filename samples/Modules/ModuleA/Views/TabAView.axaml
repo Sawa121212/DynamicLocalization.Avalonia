@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="ModuleA.Views.TabAView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:extensions="clr-namespace:DynamicLocalizationUI.Avalonia.Extensions;assembly=DynamicLocalizationUI.Avalonia"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="300">
+
+    <Grid RowDefinitions="Auto,*"
+          Background="#59B159">
+        <TabControl Grid.Row="0">
+            <TabItem Header="Tab A">
+                <StackPanel>
+                    <TextBlock Text="{Binding Message}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+
+                    <StackPanel Orientation="Horizontal" Margin="3" Spacing="5"
+                                HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Value, StringFormat={}Value: {0}}"
+                                   VerticalAlignment="Center"
+                                   Margin="3,0" />
+                        <Button Content="+1" Command="{Binding IncrementCommand}" />
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Grid.Row="1"
+                    Spacing="5"
+                    Margin="0, 10">
+            <Border Background="Gainsboro"
+                    CornerRadius="6"
+                    HorizontalAlignment="Center">
+                <StackPanel>
+                    <MenuItem Header="{extensions:Localize Cut}" />
+                    <MenuItem Header="{extensions:Localize Copy}" />
+                    <MenuItem Header="{extensions:Localize Paste}" />
+                    <Separator />
+                    <MenuItem Header="{extensions:Localize Duplicate}" />
+                    <MenuItem Header="{extensions:Localize Select_All}" />
+                    <Separator />
+                    <MenuItem Header="{extensions:Localize Delete}" Foreground="Red" />
+                </StackPanel>
+            </Border>
+
+            <Button Content="{extensions:Localize ClickMe}"
+                    Margin="0,10" Padding="3"
+                    ToolTip.Tip="{extensions:Localize ClickMe}"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+    </Grid>
+</UserControl>

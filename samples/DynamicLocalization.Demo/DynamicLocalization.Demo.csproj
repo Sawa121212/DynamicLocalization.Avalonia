@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <OutputType>WinExe</OutputType>
+        <IsPackable>False</IsPackable>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove=".gitignore" />
+        <AvaloniaResource Include="Assets\**" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <PublishTrimmed>False</PublishTrimmed>
+        <PublishSingleFile>False</PublishSingleFile>
+        <PublishReadyToRun>False</PublishReadyToRun>
+    </PropertyGroup>
+
+    <Import Project="..\..\build\Base.props" />
+    <Import Project="..\..\build\ReferenceAssemblies.props" />
+    <Import Project="..\..\build\Avalonia.props" />
+    <Import Project="..\..\build\Avalonia.Desktop.props" />
+    <Import Project="..\..\build\Avalonia.Diagnostics.props" />
+    <Import Project="..\..\build\Prism.Avalonia.props" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\DynamicLocalization.Avalonia\DynamicLocalizationUI.Avalonia.csproj" />
+        <ProjectReference Include="..\Modules\ModuleA\ModuleA.csproj" />
+        <ProjectReference Include="..\Modules\ModuleB\ModuleB.csproj" />
+        <ProjectReference Include="..\Modules\ModuleC\ModuleC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Properties\Language.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Language.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Update="Properties\Language.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Language.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+</Project>
