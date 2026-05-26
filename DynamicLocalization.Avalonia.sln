@@ -17,21 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleB", "samples\Modules\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleC", "samples\Modules\ModuleC\ModuleC.csproj", "{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicLocalizationUI.Avalonia", "src\DynamicLocalization.Avalonia\DynamicLocalizationUI.Avalonia.csproj", "{5F21001B-E2B3-D51E-12BE-AE86C148C44A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{44DCA125-AD5D-4500-A42F-AF794AAC3DDF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A85006C6-2BD6-4278-89B5-3F3DEC456DBC}"
 	ProjectSection(SolutionItems) = preProject
-		build\Avalonia.Desktop.props = build\Avalonia.Desktop.props
-		build\Avalonia.Diagnostics.props = build\Avalonia.Diagnostics.props
-		build\Avalonia.props = build\Avalonia.props
-		build\Base.props = build\Base.props
-		build\dynamicLocalization.Avalonia.public.snk = build\dynamicLocalization.Avalonia.public.snk
-		build\Prism.Avalonia.props = build\Prism.Avalonia.props
-		build\ReferenceAssemblies.props = build\ReferenceAssemblies.props
-		build\SignAssembly.props = build\SignAssembly.props
-		build\SourceLink.props = build\SourceLink.props
-		build\XUnit.props = build\XUnit.props
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicLocalizationUI.Avalonia", "src\DynamicLocalizationUI.Avalonia\DynamicLocalizationUI.Avalonia.csproj", "{D5B27450-E951-DF40-0B35-1D0C1312A1B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +48,10 @@ Global
 		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F21001B-E2B3-D51E-12BE-AE86C148C44A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B27450-E951-DF40-0B35-1D0C1312A1B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B27450-E951-DF40-0B35-1D0C1312A1B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B27450-E951-DF40-0B35-1D0C1312A1B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B27450-E951-DF40-0B35-1D0C1312A1B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +62,7 @@ Global
 		{A0C3EEBA-C4F4-2F1B-CD09-4F57343C4FBD} = {E47E2B17-2E50-4672-A7C3-9AF38C0117C7}
 		{3C9840C8-3D05-4728-3AB8-2AEC559F69EF} = {E47E2B17-2E50-4672-A7C3-9AF38C0117C7}
 		{9CFB3899-D5F7-D31C-4418-5895F0CEA1AA} = {E47E2B17-2E50-4672-A7C3-9AF38C0117C7}
-		{5F21001B-E2B3-D51E-12BE-AE86C148C44A} = {0864DB1C-0D8E-40A1-B715-04608CFFF24A}
+		{D5B27450-E951-DF40-0B35-1D0C1312A1B6} = {0864DB1C-0D8E-40A1-B715-04608CFFF24A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56BCD824-ECAE-4CAC-813F-2377F339741F}
