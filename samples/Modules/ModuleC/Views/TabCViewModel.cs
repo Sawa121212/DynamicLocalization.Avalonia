@@ -2,31 +2,30 @@
 using Prism.Mvvm;
 using System.Windows.Input;
 
-namespace ModuleC.Views
+namespace ModuleC.Views;
+
+public class TabCViewModel : BindableBase
 {
-    public class TabCViewModel : BindableBase
+    private string _message;
+    private int _value;
+
+    public TabCViewModel()
     {
-        private string _message;
-        private int _value;
-
-        public TabCViewModel()
-        {
-            Message = "View C from your Prism Module"; 
-            IncrementCommand = new DelegateCommand(() => { Value++; });
-        }
-
-        public string Message
-        {
-            get => _message;
-            set => SetProperty(ref _message, value);
-        }
-
-        public int Value
-        {
-            get => _value;
-            set => SetProperty(ref _value, value);
-        }
-
-        public ICommand IncrementCommand { get; }
+        Message = "View C from your Prism Module"; 
+        IncrementCommand = new DelegateCommand(() => { Value++; });
     }
+
+    public string Message
+    {
+        get => _message;
+        set => SetProperty(ref _message, value);
+    }
+
+    public int Value
+    {
+        get => _value;
+        set => SetProperty(ref _value, value);
+    }
+
+    public ICommand IncrementCommand { get; }
 }

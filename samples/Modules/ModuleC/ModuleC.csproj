@@ -1,16 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <IsPackable>False</IsPackable>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <Import Project="..\..\..\build\Avalonia.props" />
-    <Import Project="..\..\..\build\Prism.Avalonia.props" />
+    <ItemGroup>
+        <PackageReference Include="Prism.Avalonia" />
+    </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\src\DynamicLocalization.Avalonia\DynamicLocalizationUI.Avalonia.csproj" />
+      <ProjectReference Include="..\..\..\src\DynamicLocalizationUI.Avalonia\DynamicLocalizationUI.Avalonia.csproj" />
     </ItemGroup>
 
     <ItemGroup>

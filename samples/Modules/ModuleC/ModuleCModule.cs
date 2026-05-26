@@ -6,33 +6,32 @@ using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 
-namespace ModuleC
+namespace ModuleC;
+
+/// <summary>
+/// Модуль C
+/// </summary>
+public class ModuleCModule : IModule
 {
-    /// <summary>
-    /// Модуль C
-    /// </summary>
-    public class ModuleCModule : IModule
+    private readonly IRegionManager _regionManager;
+
+    public ModuleCModule(IRegionManager regionManager)
     {
-        private readonly IRegionManager _regionManager;
+        _regionManager = regionManager;
+    }
 
-        public ModuleCModule(IRegionManager regionManager)
-        {
-            _regionManager = regionManager;
-        }
+    public void RegisterTypes(IContainerRegistry containerRegistry)
+    {
+        // регистрируем View для навигации по Регионам
+        containerRegistry.RegisterForNavigation<TabCView>();
+    }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-            // регистрируем View для навигации по Регионам
-            containerRegistry.RegisterForNavigation<TabCView>();
-        }
+    public void OnInitialized(IContainerProvider containerProvider)
+    {
+        // Добавим ресурс Локализации в "коллекцию ресурсов локализации"
+        containerProvider.Resolve<ILocalizer>().AddResourceManager(new ResourceManager(typeof(Language)));
 
-        public void OnInitialized(IContainerProvider containerProvider)
-        {
-            // Добавим ресурс Локализации в "коллекцию ресурсов локализации"
-            containerProvider.Resolve<ILocalizer>().AddResourceManager(new ResourceManager(typeof(Language)));
-
-            // Зарегистрировать View к региону. Теперь при запуске ПО View будет показано
-            _regionManager.RegisterViewWithRegion("RegionC", typeof(TabCView));
-        }
+        // Зарегистрировать View к региону. Теперь при запуске ПО View будет показано
+        _regionManager.RegisterViewWithRegion("RegionC", typeof(TabCView));
     }
 }

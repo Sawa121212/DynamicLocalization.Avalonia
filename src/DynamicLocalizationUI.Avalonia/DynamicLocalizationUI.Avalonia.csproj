@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0;netstandard2.1;net461;net5.0;net6.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;netstandard2.1;net461;net6.0</TargetFrameworks>
         <OutputType>Library</OutputType>
         <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -13,9 +13,11 @@
         <PackageTags>Avalonia;Localization;DynamicLocalization;Control;Xaml;Managed;C#"</PackageTags>
     </PropertyGroup>
 
-    <Import Project="..\..\build\Base.props" />
+    <ItemGroup>
+        <PackageReference Include="Avalonia" />
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" PrivateAssets="All" />
+    </ItemGroup>
+
     <Import Project="..\..\build\SignAssembly.props" />
     <Import Project="..\..\build\SourceLink.props" />
-    <Import Project="..\..\build\ReferenceAssemblies.props" />
-    <Import Project="..\..\build\Avalonia.props" />
 </Project>
